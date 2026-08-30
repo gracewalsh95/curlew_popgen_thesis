@@ -231,24 +231,7 @@ bcftools isec -n +1 -p intersection/mod \
   Brit_mod.vcf.gz Ire_mod.vcf.gz Swe_mod.vcf.gz
 ```
 
-## Tool Versions
-
-| Tool | Version | Reference |
-|------|---------|-----------|
-| BCFtools/RoH | 1.15.1 | Narasimhan et al. 2016 |
-| BCFtools | 1.15.1 | Danecek et al. 2021 |
-| VCFtools | 0.1.16 | Danecek et al. 2011 |
-| PLINK2 | 2.0.0 | Chang et al. 2015 |
-| BEDTools | 2.27.1 | Quinlan & Hall 2010 |
-| ANGSD | 0.940 | Korneliussen et al. 2014 |
-| BWA-mem | 0.7.17 | Li 2013 |
-| SnpEff | 5.2c | Cingolani et al. 2012 |
-| degenotate | 1.0 | Mirchandani et al. 2024 |
-| pixy | 1.2.7 | Korunes & Samuk 2021 |
-| R | 4.x | with data.table, ggplot2, dplyr, tidyr, patchwork, ggsignif, ggVennDiagram, viridis |
-
 ## Notes
 
 Chromosome name mapping files (`correct_chrom_map.txt`, `final_ena_nc_bridge.txt`) bridge three naming schemes: numeric (PLINK-friendly), ENA accession (consensus/polarisation), and NC_ (SnpEff database).
-
 
