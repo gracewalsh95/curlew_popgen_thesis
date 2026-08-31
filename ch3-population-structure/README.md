@@ -20,8 +20,6 @@ Code and parameters to reproduce the population genomics analyses in Chapter 3. 
 | `extract_genes_pcadapt.py` | Extracts genes containing or ± 5 kb of pcadapt outlier SNP positions from GFF3 |
 | `tajima_d_jackknife.R` | Block jackknife (1 Mb non-overlapping blocks) with pairwise t-tests for Tajima's D differences between populations |
 
-CSS combination script (DSAF calculation, fractional ranking, z-score averaging) was provided by J. Ward following Randhawa et al. (2014) and Ward et al. (2024).
-
 ## Analysis Parameters
 
 ### Quality control and filtering
