@@ -40,7 +40,7 @@ king -b input.bed --kinship --related
 
 ### LD pruning
 
-PLINK v1.90b6.25.
+PLINK v1.9
 
 ```bash
 plink --vcf input.vcf --allow-extra-chr --chr-set 40 --set-missing-var-ids @:# --indep-pairwise 50 10 0.2
@@ -57,7 +57,7 @@ shapeit4 --input input.vcf.gz --output phased.vcf.gz --region CHR
 
 ### PCA
 
-PLINK v1.90b6.25. Full SNP dataset (not LD-pruned).
+PLINK v1.9. Full SNP dataset (not LD-pruned).
 
 ```bash
 plink --vcf input.vcf --allow-extra-chr --chr-set 40 --set-missing-var-ids @:# --make-bed --pca
