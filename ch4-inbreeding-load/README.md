@@ -11,7 +11,7 @@ Code and parameters to reproduce the results in Chapter 4. Standard bioinformati
 | Script | Description |
 |--------|-------------|
 | `build_load_table.sh` | Splits SnpEff-annotated VCF by impact class (LOW/MODERATE/HIGH), builds per-individual table of masked (het) and realised (hom) derived deleterious genotype counts, appends population labels |
-| `rxy_jackknife.R` | Calculates Rxy (Do et al. 2015) for each population pair, standardised to non-coding (MODIFIER) sites. CIs via weighted block jackknife (Busing et al. 1999) over ~115 contiguous blocks. Block generation and Busing SE functions from [Stuart (2026)](https://github.com/OliverPStuart/2025_Jackknife_Review); SNP-to-block assignment vectorised with `data.table::foverlaps` (identical assignments) |
+| `rxy_jackknife.R` | Calculates Rxy (Do et al. 2015) for each population pair, standardised to non-coding (MODIFIER) sites. CIs via weighted block jackknife [Busing et al. 1999](https://doi.org/10.1023/A:1008800423698) over ~115 contiguous blocks. Block generation and Busing SE functions from [Stuart (2026)](https://github.com/OliverPStuart/2025_Jackknife_Review); SNP-to-block assignment vectorised with `data.table::foverlaps` (identical assignments) |
 | `roh_analysis.R` | Processes BCFtools/RoH output into short (100 kb – 1 Mb) and long (> 1 Mb) ROH. Calculates F_ROH. Kruskal-Wallis and pairwise Wilcoxon tests (BH correction). Spearman correlations of per-window (1 Mb) ROH proportions. Generates heatmaps, violin plots, scatter plots |
 | `outlier_roh_load_overlap.sh` | Three-way intersection of Ch3 selection outlier genes, long ROH, and SnpEff impact annotations. Maps exon-level transcript IDs to parent genes. Extracts per-individual genotypes for classifying homozygous derived genotypes within/outside ROH |
 | `plot_venn.R` | Venn diagrams of shared/private deleterious variants from `bcftools isec` output. Decodes positional binary CODE column (Brit=pos1, Ire=pos2, Swe=pos3) |
@@ -63,7 +63,7 @@ Outgroup species for ancestral state reconstruction:
 | Whimbrel (*N. phaeopus*) | GCA_030770645.1 | Scaffold-level assembly |
 | Upland sandpiper (*B. longicauda*) | ASM4578454v1 | Scaffold-level assembly |
 
-Reference assemblies processed following Kardos (2023): masked sequences removed, N positions as breakpoints, remaining sequences split into uniform lengths, simulated as 100 bp overlapping reads at 10 bp intervals using BEDTools getfasta, mapped to curlew reference with BWA-mem. Little curlew WGS mapped directly. See [Kardos (2023)](https://github.com/martinkardos/WolfGenomePurging).
+Reference assemblies processed following Kardos (2023): masked sequences removed, N positions as breakpoints, remaining sequences split into uniform lengths, simulated as 100 bp overlapping reads at 10 bp intervals using BEDTools getfasta, mapped to curlew reference with BWA-mem. Little curlew WGS mapped directly. See [Kardos (2023)](https://doi.org/10.5281/zenodo.7504838).
 
 **Consensus calling** with ANGSD v0.940:
 
